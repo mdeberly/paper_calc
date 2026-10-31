@@ -53,6 +53,12 @@ class SettingsActivity : BaseActivity() {
             bindSeparators()
         }
 
+        val rgCopy = findViewById<RadioGroup>(R.id.rg_copy)
+        rgCopy.check(if (prefs.copyResultOnly) R.id.rb_copy_result else R.id.rb_copy_full)
+        findViewById<RadioButton>(R.id.rb_copy_full).onTap { }
+        findViewById<RadioButton>(R.id.rb_copy_result).onTap { }
+        rgCopy.setOnCheckedChangeListener { _, id -> prefs.copyResultOnly = id == R.id.rb_copy_result }
+
         val cbHaptic = findViewById<CheckBox>(R.id.cb_haptic)
         cbHaptic.isChecked = prefs.haptic
         cbHaptic.setOnCheckedChangeListener { _, checked ->

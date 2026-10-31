@@ -64,6 +64,19 @@
         <item name="android:soundEffectsEnabled">false</item>
     </style>
 
+    <style name="SmallTopIcon">
+        <item name="android:layout_width">34dp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+
+    <style name="MiniKey" parent="Key">
+        <item name="android:textSize">@dimen/mini_key_text</item>
+        <item name="android:background">@drawable/mini_key_bg</item>
+    </style>
+
     <style name="SectionTitle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

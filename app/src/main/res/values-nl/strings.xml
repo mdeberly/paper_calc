@@ -33,4 +33,14 @@
     <string name="clear">Wissen</string>
     <string name="clear_history_confirm">De hele geschiedenis wissen?</string>
     <string name="cancel">Annuleren</string>
+    <string name="functions">Functies</string>
+    <string name="fn_sqrt">Vierkantswortel</string>
+    <string name="fn_square">Kwadraat</string>
+    <string name="fn_power">Macht</string>
+    <string name="fn_inverse">Omgekeerde</string>
+    <string name="fn_factorial">Faculteit</string>
+    <string name="error_undefined">Ongedefinieerd resultaat</string>
+    <string name="copy_mode">Kopieerknop</string>
+    <string name="copy_full">Berekening = resultaat</string>
+    <string name="copy_result_only">Alleen resultaat</string>
 </resources>

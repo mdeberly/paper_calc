@@ -33,4 +33,14 @@
     <string name="clear">Löschen</string>
     <string name="clear_history_confirm">Gesamten Verlauf löschen?</string>
     <string name="cancel">Abbrechen</string>
+    <string name="functions">Funktionen</string>
+    <string name="fn_sqrt">Quadratwurzel</string>
+    <string name="fn_square">Quadrat</string>
+    <string name="fn_power">Potenz</string>
+    <string name="fn_inverse">Kehrwert</string>
+    <string name="fn_factorial">Fakultät</string>
+    <string name="error_undefined">Ergebnis nicht definiert</string>
+    <string name="copy_mode">Kopieren-Taste</string>
+    <string name="copy_full">Rechnung = Ergebnis</string>
+    <string name="copy_result_only">Nur Ergebnis</string>
 </resources>

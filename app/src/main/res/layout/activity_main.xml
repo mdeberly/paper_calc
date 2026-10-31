@@ -27,13 +27,13 @@
 
             <ImageButton
                 android:id="@+id/btn_copy"
-                style="@style/TopIcon"
+                style="@style/SmallTopIcon"
                 android:contentDescription="@string/copy"
                 android:src="@drawable/ic_copy" />
 
             <ImageButton
                 android:id="@+id/btn_more"
-                style="@style/TopIcon"
+                style="@style/SmallTopIcon"
                 android:contentDescription="@string/settings"
                 android:src="@drawable/ic_more" />
         </LinearLayout>
@@ -94,37 +94,84 @@
             android:layout_weight="1">
 
             <TextView android:id="@+id/key_clear" style="@style/Key" android:text="AC" />
-            <TextView android:id="@+id/key_sign" style="@style/Key" android:text="+/−"
-                android:contentDescription="@string/toggle_sign" />
+            <TextView android:id="@+id/key_fn" style="@style/Key" android:text="f(x)"
+                android:textSize="@dimen/fn_key_text"
+                android:contentDescription="@string/functions" />
             <TextView android:id="@+id/key_paren" style="@style/Key" android:text="( )"
                 android:contentDescription="@string/parentheses" />
             <ImageButton android:id="@+id/key_div" style="@style/OpKey" android:src="@drawable/ic_divide"
                 android:contentDescription="÷" />
         </LinearLayout>
 
-        <LinearLayout
+        <!-- Rows 7-8-9 / 4-5-6, covered by the function mini keypad when it is open. -->
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
-            <TextView android:id="@+id/key_7" style="@style/Key" android:text="7" />
-            <TextView android:id="@+id/key_8" style="@style/Key" android:text="8" />
-            <TextView android:id="@+id/key_9" style="@style/Key" android:text="9" />
-            <ImageButton android:id="@+id/key_mul" style="@style/OpKey" android:src="@drawable/ic_multiply"
-                android:contentDescription="×" />
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
 
-            <TextView android:id="@+id/key_4" style="@style/Key" android:text="4" />
-            <TextView android:id="@+id/key_5" style="@style/Key" android:text="5" />
-            <TextView android:id="@+id/key_6" style="@style/Key" android:text="6" />
-            <ImageButton android:id="@+id/key_sub" style="@style/OpKey" android:src="@drawable/ic_minus"
-                android:contentDescription="−" />
-        </LinearLayout>
+                    <TextView android:id="@+id/key_7" style="@style/Key" android:text="7" />
+                    <TextView android:id="@+id/key_8" style="@style/Key" android:text="8" />
+                    <TextView android:id="@+id/key_9" style="@style/Key" android:text="9" />
+                    <ImageButton android:id="@+id/key_mul" style="@style/OpKey" android:src="@drawable/ic_multiply"
+                        android:contentDescription="×" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView android:id="@+id/key_4" style="@style/Key" android:text="4" />
+                    <TextView android:id="@+id/key_5" style="@style/Key" android:text="5" />
+                    <TextView android:id="@+id/key_6" style="@style/Key" android:text="6" />
+                    <ImageButton android:id="@+id/key_sub" style="@style/OpKey" android:src="@drawable/ic_minus"
+                        android:contentDescription="−" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fn_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:background="@drawable/panel_bg"
+                android:clickable="true"
+                android:focusable="false"
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView android:id="@+id/fn_pi" style="@style/MiniKey" android:text="π" android:contentDescription="π" />
+                <TextView android:id="@+id/fn_e" style="@style/MiniKey" android:text="e" android:contentDescription="e" />
+                <TextView android:id="@+id/fn_sqrt" style="@style/MiniKey" android:text="√x" android:contentDescription="@string/fn_sqrt" />
+                <TextView android:id="@+id/fn_square" style="@style/MiniKey" android:text="x²" android:contentDescription="@string/fn_square" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView android:id="@+id/fn_power" style="@style/MiniKey" android:text="xʸ" android:contentDescription="@string/fn_power" />
+                <TextView android:id="@+id/fn_inverse" style="@style/MiniKey" android:text="1/x" android:contentDescription="@string/fn_inverse" />
+                <TextView android:id="@+id/fn_sign" style="@style/MiniKey" android:text="±" android:contentDescription="@string/toggle_sign" />
+                <TextView android:id="@+id/fn_fact" style="@style/MiniKey" android:text="n!" android:contentDescription="@string/fn_factorial" />
+            </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

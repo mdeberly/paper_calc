@@ -20,6 +20,8 @@ class MainActivity : BaseActivity() {
     private lateinit var tvExpression: TextView
     private lateinit var tvResult: TextView
     private lateinit var keyDot: TextView
+    private lateinit var keyFn: TextView
+    private lateinit var fnPanel: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +30,8 @@ class MainActivity : BaseActivity() {
         tvExpression = findViewById(R.id.expression)
         tvResult = findViewById(R.id.result)
         keyDot = findViewById(R.id.key_dot)
+        keyFn = findViewById(R.id.key_fn)
+        fnPanel = findViewById(R.id.fn_panel)
 
         calc.load(prefs.expression, prefs.expressionSaved)
         handleIntent(intent)
@@ -43,7 +47,17 @@ class MainActivity : BaseActivity() {
         key(R.id.key_mul) { calc.operator('*') }
         key(R.id.key_div) { calc.operator('/') }
         key(R.id.key_paren) { calc.parenthesis() }
-        key(R.id.key_sign) { calc.toggleSign() }
+
+        // Multi-function key: opens / closes the mini keypad.
+        keyFn.onTap { setFunctionsOpen(fnPanel.visibility != View.VISIBLE) }
+        fnKey(R.id.fn_pi) { calc.constant('π') }
+        fnKey(R.id.fn_e) { calc.constant('e') }
+        fnKey(R.id.fn_sqrt) { calc.squareRoot() }
+        fnKey(R.id.fn_square) { calc.postfix('²') }
+        fnKey(R.id.fn_power) { calc.operator('^') }
+        fnKey(R.id.fn_inverse) { calc.reciprocal() }
+        fnKey(R.id.fn_sign) { calc.toggleSign() }
+        fnKey(R.id.fn_fact) { calc.postfix('!') }
         key(R.id.key_back) { calc.backspace() }
         key(R.id.key_clear) { calc.clear() }
         key(R.id.key_eq) { onEquals() }
@@ -92,6 +106,27 @@ class MainActivity : BaseActivity() {
         }
     }
 
+    /** Mini keypad key: applies the function then closes the mini keypad. */
+    private fun fnKey(id: Int, action: () -> Unit) {
+        findViewById<View>(id).onTap {
+            action()
+            setFunctionsOpen(false)
+            refresh()
+        }
+    }
+
+    private fun setFunctionsOpen(open: Boolean) {
+        fnPanel.visibility = if (open) View.VISIBLE else View.GONE
+        keyFn.setBackgroundResource(if (open) R.drawable.key_fn_open_bg else 0)
+        keyFn.setTextColor(getColor(if (open) R.color.paper else R.color.ink))
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        if (fnPanel.visibility == View.VISIBLE) setFunctionsOpen(false)
+        else @Suppress("DEPRECATION") super.onBackPressed()
+    }
+
     private fun onEquals() {
         val entry = calc.equals() ?: return
         prefs.addHistory(entry)
@@ -112,6 +147,7 @@ class MainActivity : BaseActivity() {
             }
             Evaluator.Result.DivisionByZero -> getString(R.string.error_division_by_zero)
             Evaluator.Result.Overflow -> getString(R.string.error_overflow)
+            Evaluator.Result.Undefined -> getString(R.string.error_undefined)
             Evaluator.Result.Invalid -> ""
         }
     }
@@ -119,9 +155,12 @@ class MainActivity : BaseActivity() {
     private fun copyToClipboard() {
         if (calc.expression.isEmpty()) return
         val expr = format.formatExpression(calc.expression)
-        val text = when (val r = calc.preview()) {
-            is Evaluator.Result.Value ->
-                if (calc.showsResult()) "$expr = ${format.formatResult(r.value)}" else expr
+        val r = calc.preview()
+        val result = if (r is Evaluator.Result.Value) format.formatResult(r.value) else null
+        val text = when {
+            result == null -> expr
+            prefs.copyResultOnly -> result
+            calc.showsResult() -> "$expr = $result"
             else -> expr
         }
         val cm = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager

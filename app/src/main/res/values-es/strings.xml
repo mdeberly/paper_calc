@@ -33,4 +33,14 @@
     <string name="clear">Borrar</string>
     <string name="clear_history_confirm">¿Borrar todo el historial?</string>
     <string name="cancel">Cancelar</string>
+    <string name="functions">Funciones</string>
+    <string name="fn_sqrt">Raíz cuadrada</string>
+    <string name="fn_square">Cuadrado</string>
+    <string name="fn_power">Potencia</string>
+    <string name="fn_inverse">Inverso</string>
+    <string name="fn_factorial">Factorial</string>
+    <string name="error_undefined">Resultado no definido</string>
+    <string name="copy_mode">Botón copiar</string>
+    <string name="copy_full">Operación = resultado</string>
+    <string name="copy_result_only">Solo el resultado</string>
 </resources>

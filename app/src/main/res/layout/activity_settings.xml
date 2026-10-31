@@ -64,6 +64,18 @@
                 android:textColor="@color/ink"
                 android:textSize="17sp" />
 
+            <!-- Copy button behaviour -->
+            <TextView style="@style/SectionTitle" android:text="@string/copy_mode" />
+
+            <RadioGroup
+                android:id="@+id/rg_copy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton android:id="@+id/rb_copy_full" style="@style/Option" android:text="@string/copy_full" />
+                <RadioButton android:id="@+id/rb_copy_result" style="@style/Option" android:text="@string/copy_result_only" />
+            </RadioGroup>
+
             <!-- Haptic feedback -->
             <TextView style="@style/SectionTitle" android:text="@string/feedback" />
 

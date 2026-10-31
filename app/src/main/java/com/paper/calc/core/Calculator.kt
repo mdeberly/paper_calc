@@ -19,7 +19,7 @@ class Calculator {
         private set
 
     fun load(expression: String, saved: Boolean = false) {
-        this.expression = expression.filter { it.isDigit() || it in ".+-*/()~" }
+        this.expression = expression.filter { it.isDigit() || it in ".+-*/^()~√²!πe" }
         this.saved = saved
     }
 
@@ -38,7 +38,7 @@ class Calculator {
     fun digit(d: Char) {
         require(d in '0'..'9')
         startFreshIfSaved()
-        if (expression.lastOrNull() == ')') expression += "*"
+        if (endsWithNonNumberOperand()) expression += "*"
         val num = trailingNumber()
         if (num == "0") {
             expression = expression.dropLast(1) + d
@@ -50,7 +50,7 @@ class Calculator {
 
     fun dot() {
         startFreshIfSaved()
-        if (expression.lastOrNull() == ')') expression += "*"
+        if (endsWithNonNumberOperand()) expression += "*"
         val num = trailingNumber()
         if (num.contains('.')) return
         expression += if (num.isEmpty()) "0." else "."
@@ -62,7 +62,7 @@ class Calculator {
         val last = expression.lastOrNull()
         when {
             last == null -> if (op == '-') expression = "~"
-            last == '(' -> if (op == '-') expression += "~"
+            last == '(' || last == '√' -> if (op == '-') expression += "~"
             last == '~' -> {
                 if (op == '-') return
                 expression = expression.dropLast(1)
@@ -72,7 +72,7 @@ class Calculator {
                 }
             }
             last in Evaluator.BINARY_OPS -> {
-                expression = if (op == '-' && (last == '*' || last == '/')) {
+                expression = if (op == '-' && (last == '*' || last == '/' || last == '^')) {
                     "$expression~"
                 } else {
                     expression.dropLast(1) + op
@@ -87,7 +87,7 @@ class Calculator {
         startFreshIfSaved()
         val last = expression.lastOrNull()
         val open = expression.count { it == '(' } - expression.count { it == ')' }
-        expression += if (last != null && (last.isDigit() || last == '.' || last == ')')) {
+        expression += if (last != null && last in Evaluator.OPERAND_END) {
             if (open > 0) ")" else "*("
         } else {
             "("
@@ -100,10 +100,9 @@ class Calculator {
         when {
             last == null -> expression = "~"
             last == '~' -> expression = expression.dropLast(1)
-            last in Evaluator.BINARY_OPS || last == '(' -> expression += "~"
+            last !in Evaluator.OPERAND_END -> expression += "~"
             else -> {
-                val start = if (last == ')') matchingOpen(expression.length - 1)
-                else expression.length - trailingNumber().length
+                val start = lastOperandStart()
                 if (start < 0) return
                 expression = if (start > 0 && expression[start - 1] == '~') {
                     expression.removeRange(start - 1, start)
@@ -112,6 +111,44 @@ class Calculator {
                 }
             }
         }
+    }
+
+    /** π or e: a constant operand. */
+    fun constant(c: Char) {
+        require(c == 'π' || c == 'e')
+        startFreshIfSaved()
+        if (expression.lastOrNull()?.let { it in Evaluator.OPERAND_END } == true) expression += "*"
+        expression += c
+    }
+
+    /** Square root (prefix): applies to what is typed next. */
+    fun squareRoot() {
+        startFreshIfSaved()
+        if (expression.lastOrNull()?.let { it in Evaluator.OPERAND_END } == true) expression += "*"
+        expression += "√"
+    }
+
+    /** Postfix operator: '²' (square) or '!' (factorial), applied to the last operand. */
+    fun postfix(op: Char) {
+        require(op == '²' || op == '!')
+        continueFromResultIfSaved()
+        val last = expression.lastOrNull() ?: return
+        if (last !in Evaluator.OPERAND_END) return
+        if (last == '.') expression = expression.dropLast(1)
+        expression += op
+    }
+
+    /** 1/x: replaces the last operand x by (1/x). */
+    fun reciprocal() {
+        continueFromResultIfSaved()
+        val last = expression.lastOrNull()
+        if (last == null || last !in Evaluator.OPERAND_END) {
+            expression += "(1/"
+            return
+        }
+        val start = lastOperandStart()
+        if (start < 0) return
+        expression = expression.substring(0, start) + "(1/" + expression.substring(start) + ")"
     }
 
     fun backspace() {
@@ -146,6 +183,30 @@ class Calculator {
         saved = false
         val r = Evaluator.evaluate(expression)
         expression = if (r is Evaluator.Result.Value) NumberFormat.canonical(r.value) else ""
+    }
+
+    private fun endsWithNonNumberOperand(): Boolean {
+        val last = expression.lastOrNull() ?: return false
+        return last in ")πe²!"
+    }
+
+    /** Start index of the last complete operand (including its √ prefixes), or -1. */
+    private fun lastOperandStart(): Int {
+        var i = expression.length - 1
+        while (i >= 0 && (expression[i] == '²' || expression[i] == '!')) i--
+        if (i < 0) return -1
+        var start = when (val c = expression[i]) {
+            ')' -> matchingOpen(i)
+            'π', 'e' -> i
+            else -> if (c.isDigit() || c == '.') {
+                var j = i
+                while (j > 0 && (expression[j - 1].isDigit() || expression[j - 1] == '.')) j--
+                j
+            } else -1
+        }
+        if (start < 0) return -1
+        while (start > 0 && expression[start - 1] == '√') start--
+        return start
     }
 
     private fun trailingNumber(): String {

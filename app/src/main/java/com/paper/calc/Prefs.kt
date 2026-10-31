@@ -29,6 +29,11 @@ class Prefs(context: Context) {
         get() = sp.getBoolean(KEY_HAPTIC, true)
         set(value) = sp.edit().putBoolean(KEY_HAPTIC, value).apply()
 
+    /** Copy button: true = result only, false = "operation = result". */
+    var copyResultOnly: Boolean
+        get() = sp.getBoolean(KEY_COPY_RESULT_ONLY, false)
+        set(value) = sp.edit().putBoolean(KEY_COPY_RESULT_ONLY, value).apply()
+
     /** Language tag ("" = follow the system). */
     var language: String
         get() = sp.getString(KEY_LANGUAGE, "") ?: ""
@@ -88,6 +93,7 @@ class Prefs(context: Context) {
         private const val KEY_DECIMAL = "decimal_sep"
         private const val KEY_GROUP = "group_sep"
         private const val KEY_HAPTIC = "haptic"
+        private const val KEY_COPY_RESULT_ONLY = "copy_result_only"
         private const val KEY_LANGUAGE = "language"
         private const val KEY_EXPR = "expression"
         private const val KEY_EXPR_SAVED = "expression_saved"

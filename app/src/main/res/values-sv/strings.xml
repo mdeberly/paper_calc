@@ -33,4 +33,14 @@
     <string name="clear">Rensa</string>
     <string name="clear_history_confirm">Rensa hela historiken?</string>
     <string name="cancel">Avbryt</string>
+    <string name="functions">Funktioner</string>
+    <string name="fn_sqrt">Kvadratrot</string>
+    <string name="fn_square">Kvadrat</string>
+    <string name="fn_power">Potens</string>
+    <string name="fn_inverse">Invers</string>
+    <string name="fn_factorial">Fakultet</string>
+    <string name="error_undefined">Odefinierat resultat</string>
+    <string name="copy_mode">Kopieringsknapp</string>
+    <string name="copy_full">Beräkning = resultat</string>
+    <string name="copy_result_only">Endast resultat</string>
 </resources>

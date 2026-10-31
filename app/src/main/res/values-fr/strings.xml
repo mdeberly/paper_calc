@@ -33,4 +33,14 @@
     <string name="clear">Effacer</string>
     <string name="clear_history_confirm">Effacer tout l\'historique ?</string>
     <string name="cancel">Annuler</string>
+    <string name="functions">Fonctions</string>
+    <string name="fn_sqrt">Racine carrée</string>
+    <string name="fn_square">Carré</string>
+    <string name="fn_power">Puissance</string>
+    <string name="fn_inverse">Inverse</string>
+    <string name="fn_factorial">Factorielle</string>
+    <string name="error_undefined">Résultat non défini</string>
+    <string name="copy_mode">Bouton copier</string>
+    <string name="copy_full">Opération = résultat</string>
+    <string name="copy_result_only">Résultat seul</string>
 </resources>

@@ -22,6 +22,11 @@ class CalculatorTest {
             '<' -> c.backspace()
             'C' -> c.clear()
             '=' -> c.equals()
+            'π', 'e' -> c.constant(k)
+            'r' -> c.squareRoot()
+            '²', '!' -> c.postfix(k)
+            '^' -> c.operator('^')
+            'i' -> c.reciprocal()
         }
         return c
     }
@@ -127,5 +132,53 @@ class CalculatorTest {
     @Test fun maxDigits() {
         val c = calc("1234567890123456789")
         assertEquals(15, c.expression.length)
+    }
+
+    @Test fun constants() {
+        assertEquals("3.14159265358979", preview("π"))
+        assertEquals("6.28318530717959", preview("2π"))
+        assertEquals("2*π", calc("2π").expression)
+        assertEquals("2.71828182845905", preview("e"))
+    }
+
+    @Test fun squareRoot() {
+        assertEquals("3", preview("r9"))
+        assertEquals("1.4142135623731", preview("r2"))
+        assertEquals("5", preview("rp9+16p"))
+        assertEquals("7", preview("1+2r9"))
+        assertTrue(calc("r9s").preview() is Evaluator.Result.Value)
+        assertTrue(calc("rp-4p").preview() is Evaluator.Result.Undefined)
+    }
+
+    @Test fun squareAndPower() {
+        assertEquals("25", preview("5²"))
+        assertEquals("−25", preview("-5²"))
+        assertEquals("13", preview("2²+3²"))
+        assertEquals("1,024", preview("2^10"))
+        assertEquals("512", preview("2^3^2"))
+        assertEquals("0.5", preview("2^-1"))
+        assertEquals("2", preview("4^0.5"))
+        assertEquals("18", preview("2*3^2"))
+        assertTrue(calc("10^200").preview() is Evaluator.Result.Overflow)
+    }
+
+    @Test fun factorial() {
+        assertEquals("120", preview("5!"))
+        assertEquals("1", preview("0!"))
+        assertTrue(calc("2.5!").preview() is Evaluator.Result.Undefined)
+        assertTrue(calc("70!").preview() is Evaluator.Result.Overflow)
+    }
+
+    @Test fun reciprocal() {
+        assertEquals("(1/4)", calc("4i").expression)
+        assertEquals("2+(1/4)", calc("2+4i").expression)
+        assertEquals("2.25", preview("2+4i"))
+        assertEquals("2^(1/2)", calc("2^2i").expression)
+    }
+
+    @Test fun signOnFunctions() {
+        assertEquals("~π", calc("πs").expression)
+        assertEquals("~√9", calc("r9s").expression)
+        assertEquals("2+~3²", calc("2+3²s").expression)
     }
 }

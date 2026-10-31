@@ -33,4 +33,14 @@
     <string name="clear">Vymazat</string>
     <string name="clear_history_confirm">Vymazat celou historii?</string>
     <string name="cancel">Zrušit</string>
+    <string name="functions">Funkce</string>
+    <string name="fn_sqrt">Druhá odmocnina</string>
+    <string name="fn_square">Druhá mocnina</string>
+    <string name="fn_power">Mocnina</string>
+    <string name="fn_inverse">Převrácená hodnota</string>
+    <string name="fn_factorial">Faktoriál</string>
+    <string name="error_undefined">Nedefinovaný výsledek</string>
+    <string name="copy_mode">Tlačítko kopírovat</string>
+    <string name="copy_full">Výpočet = výsledek</string>
+    <string name="copy_result_only">Pouze výsledek</string>
 </resources>

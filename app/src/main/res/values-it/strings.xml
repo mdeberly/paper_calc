@@ -33,4 +33,14 @@
     <string name="clear">Cancella</string>
     <string name="clear_history_confirm">Cancellare tutta la cronologia?</string>
     <string name="cancel">Annulla</string>
+    <string name="functions">Funzioni</string>
+    <string name="fn_sqrt">Radice quadrata</string>
+    <string name="fn_square">Quadrato</string>
+    <string name="fn_power">Potenza</string>
+    <string name="fn_inverse">Inverso</string>
+    <string name="fn_factorial">Fattoriale</string>
+    <string name="error_undefined">Risultato non definito</string>
+    <string name="copy_mode">Pulsante copia</string>
+    <string name="copy_full">Operazione = risultato</string>
+    <string name="copy_result_only">Solo il risultato</string>
 </resources>

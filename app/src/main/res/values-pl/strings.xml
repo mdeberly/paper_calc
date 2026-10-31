@@ -33,4 +33,14 @@
     <string name="clear">Wyczyść</string>
     <string name="clear_history_confirm">Wyczyścić całą historię?</string>
     <string name="cancel">Anuluj</string>
+    <string name="functions">Funkcje</string>
+    <string name="fn_sqrt">Pierwiastek kwadratowy</string>
+    <string name="fn_square">Kwadrat</string>
+    <string name="fn_power">Potęga</string>
+    <string name="fn_inverse">Odwrotność</string>
+    <string name="fn_factorial">Silnia</string>
+    <string name="error_undefined">Wynik nieokreślony</string>
+    <string name="copy_mode">Przycisk kopiowania</string>
+    <string name="copy_full">Działanie = wynik</string>
+    <string name="copy_result_only">Tylko wynik</string>
 </resources>
