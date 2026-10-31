@@ -64,12 +64,11 @@
             android:autoSizeMinTextSize="14sp"
             android:autoSizeStepGranularity="2sp"
             android:autoSizeTextType="uniform"
-            android:fontFamily="sans-serif"
+            android:fontFamily="sans-serif-medium"
             android:gravity="center_vertical|end"
             android:includeFontPadding="false"
             android:maxLines="1"
-            android:textColor="@color/ink"
-            android:textStyle="bold" />
+            android:textColor="@color/ink" />
     </LinearLayout>
 
     <View
