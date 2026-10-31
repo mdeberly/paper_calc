@@ -25,9 +25,15 @@ class Prefs(context: Context) {
         get() = sp.getString(KEY_GROUP, null)?.firstOrNull() ?: ','
         set(value) = sp.edit().putString(KEY_GROUP, value.toString()).apply()
 
-    var haptic: Boolean
-        get() = sp.getBoolean(KEY_HAPTIC, true)
-        set(value) = sp.edit().putBoolean(KEY_HAPTIC, value).apply()
+    /** Haptic feedback strength: [HAPTIC_OFF], [HAPTIC_LIGHT], [HAPTIC_MEDIUM] or [HAPTIC_STRONG]. */
+    var hapticLevel: Int
+        get() = when {
+            sp.contains(KEY_HAPTIC_LEVEL) -> sp.getInt(KEY_HAPTIC_LEVEL, HAPTIC_MEDIUM)
+            // migration from the former on/off setting
+            !sp.getBoolean(KEY_HAPTIC, true) -> HAPTIC_OFF
+            else -> HAPTIC_MEDIUM
+        }
+        set(value) = sp.edit().putInt(KEY_HAPTIC_LEVEL, value).apply()
 
     /** Copy button: true = result only, false = "operation = result". */
     var copyResultOnly: Boolean
@@ -87,12 +93,18 @@ class Prefs(context: Context) {
     companion object {
         const val HISTORY_SIZE = 20
 
+        const val HAPTIC_OFF = 0
+        const val HAPTIC_LIGHT = 1
+        const val HAPTIC_MEDIUM = 2
+        const val HAPTIC_STRONG = 3
+
         /** Group separator used for "space". */
         const val SPACE = NumberFormat.SPACE
 
         private const val KEY_DECIMAL = "decimal_sep"
         private const val KEY_GROUP = "group_sep"
         private const val KEY_HAPTIC = "haptic"
+        private const val KEY_HAPTIC_LEVEL = "haptic_level"
         private const val KEY_COPY_RESULT_ONLY = "copy_result_only"
         private const val KEY_LANGUAGE = "language"
         private const val KEY_EXPR = "expression"

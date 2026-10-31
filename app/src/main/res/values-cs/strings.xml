@@ -10,7 +10,6 @@
     <string name="sep_space">Mezera</string>
     <string name="example">Příklad: %1$s</string>
     <string name="feedback">Odezva</string>
-    <string name="haptic_feedback">Vibrovat při každém stisku klávesy</string>
     <string name="language">Jazyk</string>
     <string name="language_system">Jazyk systému</string>
     <string name="about">O aplikaci</string>
@@ -43,4 +42,8 @@
     <string name="copy_mode">Tlačítko kopírovat</string>
     <string name="copy_full">Výpočet = výsledek</string>
     <string name="copy_result_only">Pouze výsledek</string>
+    <string name="haptic_off">Vypnuto</string>
+    <string name="haptic_light">Slabá</string>
+    <string name="haptic_medium">Střední</string>
+    <string name="haptic_strong">Silná</string>
 </resources>

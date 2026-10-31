@@ -10,7 +10,6 @@
     <string name="sep_space">Spacja</string>
     <string name="example">Przykład: %1$s</string>
     <string name="feedback">Reakcja</string>
-    <string name="haptic_feedback">Wibracja przy każdym naciśnięciu klawisza</string>
     <string name="language">Język</string>
     <string name="language_system">Język systemu</string>
     <string name="about">O aplikacji</string>
@@ -43,4 +42,8 @@
     <string name="copy_mode">Przycisk kopiowania</string>
     <string name="copy_full">Działanie = wynik</string>
     <string name="copy_result_only">Tylko wynik</string>
+    <string name="haptic_off">Wyłączona</string>
+    <string name="haptic_light">Słaba</string>
+    <string name="haptic_medium">Średnia</string>
+    <string name="haptic_strong">Silna</string>
 </resources>

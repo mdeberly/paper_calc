@@ -10,7 +10,6 @@
     <string name="sep_space">Espaço</string>
     <string name="example">Exemplo: %1$s</string>
     <string name="feedback">Resposta</string>
-    <string name="haptic_feedback">Vibrar a cada toque numa tecla</string>
     <string name="language">Idioma</string>
     <string name="language_system">Idioma do sistema</string>
     <string name="about">Sobre</string>
@@ -43,4 +42,8 @@
     <string name="copy_mode">Botão copiar</string>
     <string name="copy_full">Operação = resultado</string>
     <string name="copy_result_only">Apenas o resultado</string>
+    <string name="haptic_off">Desativada</string>
+    <string name="haptic_light">Suave</string>
+    <string name="haptic_medium">Média</string>
+    <string name="haptic_strong">Forte</string>
 </resources>

@@ -10,7 +10,6 @@
     <string name="sep_space">Spatie</string>
     <string name="example">Voorbeeld: %1$s</string>
     <string name="feedback">Feedback</string>
-    <string name="haptic_feedback">Trillen bij elke toetsaanslag</string>
     <string name="language">Taal</string>
     <string name="language_system">Systeemtaal</string>
     <string name="about">Over</string>
@@ -43,4 +42,8 @@
     <string name="copy_mode">Kopieerknop</string>
     <string name="copy_full">Berekening = resultaat</string>
     <string name="copy_result_only">Alleen resultaat</string>
+    <string name="haptic_off">Uit</string>
+    <string name="haptic_light">Licht</string>
+    <string name="haptic_medium">Gemiddeld</string>
+    <string name="haptic_strong">Sterk</string>
 </resources>

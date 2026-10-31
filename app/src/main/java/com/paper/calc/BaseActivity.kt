@@ -45,11 +45,24 @@ abstract class BaseActivity : Activity() {
     }
 
     /** Short "click" vibration, if enabled. */
-    fun haptic() {
-        if (!prefs.haptic) return
+    fun haptic() = vibrate(prefs.hapticLevel)
+
+    /**
+     * Vibrates for the given strength level (0 = off). Very short pulses are not
+     * felt on the Kompakt's vibration motor, so the shortest level is 35 ms and
+     * the full amplitude is used when the motor supports amplitude control.
+     */
+    fun vibrate(level: Int) {
+        if (level <= Prefs.HAPTIC_OFF) return
         val v = vibrator ?: return
         if (!v.hasVibrator()) return
-        v.vibrate(VibrationEffect.createOneShot(HAPTIC_MS, VibrationEffect.DEFAULT_AMPLITUDE))
+        val ms = HAPTIC_MS[level.coerceIn(1, HAPTIC_MS.size - 1)]
+        val amplitude = if (v.hasAmplitudeControl()) 255 else VibrationEffect.DEFAULT_AMPLITUDE
+        try {
+            v.vibrate(VibrationEffect.createOneShot(ms, amplitude))
+        } catch (e: RuntimeException) {
+            // Some ROMs reject vibration requests; never crash the calculator for that.
+        }
     }
 
     /**
@@ -74,7 +87,8 @@ abstract class BaseActivity : Activity() {
     }
 
     companion object {
-        private const val HAPTIC_MS = 22L
+        /** Vibration length per level: off, light, medium, strong. */
+        private val HAPTIC_MS = longArrayOf(0L, 35L, 60L, 100L)
 
         /** Supported languages: tag to native name. "" = system. */
         val LANGUAGES = linkedMapOf(

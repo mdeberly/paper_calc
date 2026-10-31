@@ -10,7 +10,6 @@
     <string name="sep_space">Mellanslag</string>
     <string name="example">Exempel: %1$s</string>
     <string name="feedback">Återkoppling</string>
-    <string name="haptic_feedback">Vibrera vid varje knapptryckning</string>
     <string name="language">Språk</string>
     <string name="language_system">Systemspråk</string>
     <string name="about">Om</string>
@@ -43,4 +42,8 @@
     <string name="copy_mode">Kopieringsknapp</string>
     <string name="copy_full">Beräkning = resultat</string>
     <string name="copy_result_only">Endast resultat</string>
+    <string name="haptic_off">Av</string>
+    <string name="haptic_light">Lätt</string>
+    <string name="haptic_medium">Medel</string>
+    <string name="haptic_strong">Stark</string>
 </resources>

@@ -79,10 +79,16 @@
             <!-- Haptic feedback -->
             <TextView style="@style/SectionTitle" android:text="@string/feedback" />
 
-            <CheckBox
-                android:id="@+id/cb_haptic"
-                style="@style/Option"
-                android:text="@string/haptic_feedback" />
+            <RadioGroup
+                android:id="@+id/rg_haptic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton android:id="@+id/rb_haptic_off" style="@style/Option" android:text="@string/haptic_off" />
+                <RadioButton android:id="@+id/rb_haptic_light" style="@style/Option" android:text="@string/haptic_light" />
+                <RadioButton android:id="@+id/rb_haptic_medium" style="@style/Option" android:text="@string/haptic_medium" />
+                <RadioButton android:id="@+id/rb_haptic_strong" style="@style/Option" android:text="@string/haptic_strong" />
+            </RadioGroup>
 
             <!-- Language -->
             <TextView style="@style/SectionTitle" android:text="@string/language" />

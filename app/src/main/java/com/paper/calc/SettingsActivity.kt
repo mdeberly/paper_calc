@@ -8,7 +8,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
@@ -59,11 +58,18 @@ class SettingsActivity : BaseActivity() {
         findViewById<RadioButton>(R.id.rb_copy_result).onTap { }
         rgCopy.setOnCheckedChangeListener { _, id -> prefs.copyResultOnly = id == R.id.rb_copy_result }
 
-        val cbHaptic = findViewById<CheckBox>(R.id.cb_haptic)
-        cbHaptic.isChecked = prefs.haptic
-        cbHaptic.setOnCheckedChangeListener { _, checked ->
-            prefs.haptic = checked
-            haptic()
+        val hapticIds = mapOf(
+            Prefs.HAPTIC_OFF to R.id.rb_haptic_off,
+            Prefs.HAPTIC_LIGHT to R.id.rb_haptic_light,
+            Prefs.HAPTIC_MEDIUM to R.id.rb_haptic_medium,
+            Prefs.HAPTIC_STRONG to R.id.rb_haptic_strong,
+        )
+        val rgHaptic = findViewById<RadioGroup>(R.id.rg_haptic)
+        rgHaptic.check(hapticIds[prefs.hapticLevel] ?: R.id.rb_haptic_medium)
+        rgHaptic.setOnCheckedChangeListener { _, id ->
+            val level = hapticIds.entries.firstOrNull { it.value == id }?.key ?: Prefs.HAPTIC_MEDIUM
+            prefs.hapticLevel = level
+            vibrate(level) // immediate test of the chosen strength
         }
 
         val btnLanguage = findViewById<TextView>(R.id.btn_language)
