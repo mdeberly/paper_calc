@@ -47,10 +47,10 @@ that moves when it doesn't have to.
 
 ## Install
 
-1. Download `PaperCALC-vX.Y.apk` from the
+1. Download `PaperCALC.apk` from the
    [latest release](https://github.com/mdeberly/paper_calc/releases/latest).
 2. Open it on your Kompakt (allow installation from unknown sources if asked), or run
-   `adb install PaperCALC-vX.Y.apk`.
+   `adb install PaperCALC.apk`.
 3. To check for updates later, go to **⋮ → About → Check for the latest release**.
 
 ---

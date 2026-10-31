@@ -32,7 +32,7 @@ Chaque push construit l'APK via GitHub Actions (onglet *Actions*, artefact `Pape
 Pour publier une release : créer un tag `v1.0` et le pousser ; l'APK est alors joint à la
 [dernière release](https://github.com/mdeberly/paper_calc/releases/latest).
 
-Installation sur le Kompakt : copier l'APK sur le téléphone (ou via `adb install PaperCALC-v1.0.apk`).
+Installation sur le Kompakt : copier l'APK sur le téléphone (ou via `adb install PaperCALC.apk`).
 
 ## Compilation locale
 

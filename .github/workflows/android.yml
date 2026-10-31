@@ -37,8 +37,9 @@ jobs:
       - name: Rename APK
         run: |
           VERSION=$(grep -m1 'versionName' app/build.gradle.kts | sed -E 's/.*"(.*)".*/\1/')
-          cp app/build/outputs/apk/release/app-release.apk "PaperCALC-v${VERSION}.apk"
-          echo "APK=PaperCALC-v${VERSION}.apk" >> "$GITHUB_ENV"
+          # Same file name for every version, so the download link never changes.
+          cp app/build/outputs/apk/release/app-release.apk PaperCALC.apk
+          echo "APK=PaperCALC.apk" >> "$GITHUB_ENV"
           echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
 
       - uses: actions/upload-artifact@v4
