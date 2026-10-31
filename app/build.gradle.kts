@@ -11,8 +11,8 @@ android {
         applicationId = "com.paper.calc"
         minSdk = 26
         targetSdk = 34
-        versionCode = 15
-        versionName = "1.36"
+        versionCode = 16
+        versionName = "1.37"
     }
 
     // One fixed signing key for every build: Android only accepts an update

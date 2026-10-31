@@ -46,7 +46,7 @@
             android:layout_weight="1"
             android:autoSizeMaxTextSize="@dimen/expr_text_max"
             android:autoSizeMinTextSize="16sp"
-            android:autoSizeStepGranularity="2sp"
+            android:autoSizeStepGranularity="1sp"
             android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif"
             android:gravity="bottom|end"

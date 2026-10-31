@@ -2,8 +2,8 @@
 <resources>
     <dimen name="key_text">30sp</dimen>
     <dimen name="op_inset">6dp</dimen>
-    <dimen name="expr_text_max">26sp</dimen>
-    <dimen name="result_text">36sp</dimen>
+    <dimen name="expr_text_max">27sp</dimen>
+    <dimen name="result_text">38sp</dimen>
     <dimen name="fn_key_text">24sp</dimen>
     <dimen name="mini_key_text">26sp</dimen>
 </resources>
