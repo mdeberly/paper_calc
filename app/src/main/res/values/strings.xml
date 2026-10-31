@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Paper CALC</string>
+    <string name="settings">Options</string>
+    <string name="history">History</string>
+    <string name="history_open">Show the last 20 operations</string>
+    <string name="decimal_separator">Decimal separator</string>
+    <string name="thousands_separator">Thousands separator</string>
+    <string name="sep_comma">Comma ( , )</string>
+    <string name="sep_point">Point ( . )</string>
+    <string name="sep_space">Space</string>
+    <string name="example">Example: %1$s</string>
+    <string name="feedback">Feedback</string>
+    <string name="haptic_feedback">Vibrate on each key press</string>
+    <string name="language">Language</string>
+    <string name="language_system">System language</string>
+    <string name="about">About</string>
+    <string name="about_version">%1$s – version %2$s</string>
+    <string name="about_author">Made by Maximilien DEBERLY, Pharmacist, Chauny, FRANCE</string>
+    <string name="about_ai">with the help of Claude AI for the code</string>
+    <string name="flag_france">French flag</string>
+    <string name="check_latest_release">Check for the latest release</string>
+    <string name="no_browser">No browser found. The link has been copied to the clipboard.</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied: %1$s</string>
+    <string name="back">Back</string>
+    <string name="backspace">Delete</string>
+    <string name="toggle_sign">Change sign</string>
+    <string name="parentheses">Parentheses</string>
+    <string name="error_division_by_zero">Cannot divide by zero</string>
+    <string name="error_overflow">Number too large</string>
+    <string name="history_hint">Tap an operation to reuse it, long press to copy it.</string>
+    <string name="history_empty">No operations yet. Press = to save an operation.</string>
+    <string name="clear">Clear</string>
+    <string name="clear_history_confirm">Clear the whole history?</string>
+    <string name="cancel">Cancel</string>
+</resources>

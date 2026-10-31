@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ink">#000000</color>
+    <color name="paper">#FFFFFF</color>
+    <color name="flag_blue">#002395</color>
+    <color name="flag_red">#ED2939</color>
+</resources>

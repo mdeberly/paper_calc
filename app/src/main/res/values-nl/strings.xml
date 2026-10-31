@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Opties</string>
+    <string name="history">Geschiedenis</string>
+    <string name="history_open">De laatste 20 berekeningen tonen</string>
+    <string name="decimal_separator">Decimaalteken</string>
+    <string name="thousands_separator">Scheidingsteken duizendtallen</string>
+    <string name="sep_comma">Komma ( , )</string>
+    <string name="sep_point">Punt ( . )</string>
+    <string name="sep_space">Spatie</string>
+    <string name="example">Voorbeeld: %1$s</string>
+    <string name="feedback">Feedback</string>
+    <string name="haptic_feedback">Trillen bij elke toetsaanslag</string>
+    <string name="language">Taal</string>
+    <string name="language_system">Systeemtaal</string>
+    <string name="about">Over</string>
+    <string name="about_version">%1$s – versie %2$s</string>
+    <string name="about_author">Gemaakt door Maximilien DEBERLY, Apotheker, Chauny, FRANKRIJK</string>
+    <string name="about_ai">met de hulp van Claude AI voor de code</string>
+    <string name="flag_france">Franse vlag</string>
+    <string name="check_latest_release">Controleren op nieuwste versie</string>
+    <string name="no_browser">Geen browser gevonden. De link is naar het klembord gekopieerd.</string>
+    <string name="copy">Kopiëren</string>
+    <string name="copied">Gekopieerd: %1$s</string>
+    <string name="back">Terug</string>
+    <string name="backspace">Wissen</string>
+    <string name="toggle_sign">Teken wijzigen</string>
+    <string name="parentheses">Haakjes</string>
+    <string name="error_division_by_zero">Delen door nul is niet mogelijk</string>
+    <string name="error_overflow">Getal te groot</string>
+    <string name="history_hint">Tik op een berekening om die te hergebruiken, lang drukken om te kopiëren.</string>
+    <string name="history_empty">Nog geen berekeningen. Druk op = om een berekening op te slaan.</string>
+    <string name="clear">Wissen</string>
+    <string name="clear_history_confirm">De hele geschiedenis wissen?</string>
+    <string name="cancel">Annuleren</string>
+</resources>

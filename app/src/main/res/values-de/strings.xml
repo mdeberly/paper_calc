@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Optionen</string>
+    <string name="history">Verlauf</string>
+    <string name="history_open">Die letzten 20 Rechnungen anzeigen</string>
+    <string name="decimal_separator">Dezimaltrennzeichen</string>
+    <string name="thousands_separator">Tausendertrennzeichen</string>
+    <string name="sep_comma">Komma ( , )</string>
+    <string name="sep_point">Punkt ( . )</string>
+    <string name="sep_space">Leerzeichen</string>
+    <string name="example">Beispiel: %1$s</string>
+    <string name="feedback">Rückmeldung</string>
+    <string name="haptic_feedback">Bei jedem Tastendruck vibrieren</string>
+    <string name="language">Sprache</string>
+    <string name="language_system">Systemsprache</string>
+    <string name="about">Über</string>
+    <string name="about_version">%1$s – Version %2$s</string>
+    <string name="about_author">Erstellt von Maximilien DEBERLY, Apotheker, Chauny, FRANKREICH</string>
+    <string name="about_ai">mit Hilfe von Claude AI für den Code</string>
+    <string name="flag_france">Flagge Frankreichs</string>
+    <string name="check_latest_release">Neueste Version prüfen</string>
+    <string name="no_browser">Kein Browser gefunden. Der Link wurde in die Zwischenablage kopiert.</string>
+    <string name="copy">Kopieren</string>
+    <string name="copied">Kopiert: %1$s</string>
+    <string name="back">Zurück</string>
+    <string name="backspace">Löschen</string>
+    <string name="toggle_sign">Vorzeichen wechseln</string>
+    <string name="parentheses">Klammern</string>
+    <string name="error_division_by_zero">Division durch Null nicht möglich</string>
+    <string name="error_overflow">Zahl zu groß</string>
+    <string name="history_hint">Tippen, um eine Rechnung wiederzuverwenden, lange drücken zum Kopieren.</string>
+    <string name="history_empty">Noch keine Rechnungen. Drücken Sie =, um eine Rechnung zu speichern.</string>
+    <string name="clear">Löschen</string>
+    <string name="clear_history_confirm">Gesamten Verlauf löschen?</string>
+    <string name="cancel">Abbrechen</string>
+</resources>

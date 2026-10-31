@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Display / keypad split: in the reference design the keypad uses ~75% of the
+  height. It is reduced by 15% (75% x 0.85 = 64%) so that the display grows.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper"
+    android:orientation="vertical">
+
+    <!-- ========================= DISPLAY ========================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="36"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_copy"
+                style="@style/TopIcon"
+                android:contentDescription="@string/copy"
+                android:src="@drawable/ic_copy" />
+
+            <ImageButton
+                android:id="@+id/btn_more"
+                style="@style/TopIcon"
+                android:contentDescription="@string/settings"
+                android:src="@drawable/ic_more" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/expression"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="@dimen/expr_text_max"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif"
+            android:gravity="bottom|end"
+            android:includeFontPadding="false"
+            android:maxLines="3"
+            android:textColor="@color/ink"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:autoSizeMaxTextSize="@dimen/result_text"
+            android:autoSizeMinTextSize="14sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical|end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/ink"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:background="@color/ink" />
+
+    <!-- ========================= KEYPAD ========================== -->
+    <LinearLayout
+        android:id="@+id/keypad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="64"
+        android:orientation="vertical"
+        android:paddingStart="4dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView android:id="@+id/key_clear" style="@style/Key" android:text="AC" />
+            <TextView android:id="@+id/key_sign" style="@style/Key" android:text="+/−"
+                android:contentDescription="@string/toggle_sign" />
+            <TextView android:id="@+id/key_paren" style="@style/Key" android:text="( )"
+                android:contentDescription="@string/parentheses" />
+            <ImageButton android:id="@+id/key_div" style="@style/OpKey" android:src="@drawable/ic_divide"
+                android:contentDescription="÷" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView android:id="@+id/key_7" style="@style/Key" android:text="7" />
+            <TextView android:id="@+id/key_8" style="@style/Key" android:text="8" />
+            <TextView android:id="@+id/key_9" style="@style/Key" android:text="9" />
+            <ImageButton android:id="@+id/key_mul" style="@style/OpKey" android:src="@drawable/ic_multiply"
+                android:contentDescription="×" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView android:id="@+id/key_4" style="@style/Key" android:text="4" />
+            <TextView android:id="@+id/key_5" style="@style/Key" android:text="5" />
+            <TextView android:id="@+id/key_6" style="@style/Key" android:text="6" />
+            <ImageButton android:id="@+id/key_sub" style="@style/OpKey" android:src="@drawable/ic_minus"
+                android:contentDescription="−" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView android:id="@+id/key_1" style="@style/Key" android:text="1" />
+            <TextView android:id="@+id/key_2" style="@style/Key" android:text="2" />
+            <TextView android:id="@+id/key_3" style="@style/Key" android:text="3" />
+            <ImageButton android:id="@+id/key_add" style="@style/OpKey" android:src="@drawable/ic_plus"
+                android:contentDescription="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView android:id="@+id/key_0" style="@style/Key" android:text="0" />
+            <TextView android:id="@+id/key_dot" style="@style/Key" android:text="." />
+            <ImageButton android:id="@+id/key_back" style="@style/OpKey" android:background="@null"
+                android:src="@drawable/ic_backspace" android:contentDescription="@string/backspace" />
+            <ImageButton android:id="@+id/key_eq" style="@style/OpKey" android:background="@drawable/key_eq_bg"
+                android:src="@drawable/ic_equals" android:contentDescription="=" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

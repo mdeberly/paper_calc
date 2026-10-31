@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Opcje</string>
+    <string name="history">Historia</string>
+    <string name="history_open">Pokaż 20 ostatnich działań</string>
+    <string name="decimal_separator">Separator dziesiętny</string>
+    <string name="thousands_separator">Separator tysięcy</string>
+    <string name="sep_comma">Przecinek ( , )</string>
+    <string name="sep_point">Kropka ( . )</string>
+    <string name="sep_space">Spacja</string>
+    <string name="example">Przykład: %1$s</string>
+    <string name="feedback">Reakcja</string>
+    <string name="haptic_feedback">Wibracja przy każdym naciśnięciu klawisza</string>
+    <string name="language">Język</string>
+    <string name="language_system">Język systemu</string>
+    <string name="about">O aplikacji</string>
+    <string name="about_version">%1$s – wersja %2$s</string>
+    <string name="about_author">Autor: Maximilien DEBERLY, farmaceuta, Chauny, FRANCJA</string>
+    <string name="about_ai">z pomocą Claude AI przy kodzie</string>
+    <string name="flag_france">Flaga Francji</string>
+    <string name="check_latest_release">Sprawdź najnowszą wersję</string>
+    <string name="no_browser">Nie znaleziono przeglądarki. Link skopiowano do schowka.</string>
+    <string name="copy">Kopiuj</string>
+    <string name="copied">Skopiowano: %1$s</string>
+    <string name="back">Wstecz</string>
+    <string name="backspace">Usuń</string>
+    <string name="toggle_sign">Zmień znak</string>
+    <string name="parentheses">Nawiasy</string>
+    <string name="error_division_by_zero">Nie można dzielić przez zero</string>
+    <string name="error_overflow">Liczba zbyt duża</string>
+    <string name="history_hint">Dotknij działania, aby go użyć ponownie, przytrzymaj, aby skopiować.</string>
+    <string name="history_empty">Brak działań. Naciśnij =, aby zapisać działanie.</string>
+    <string name="clear">Wyczyść</string>
+    <string name="clear_history_confirm">Wyczyścić całą historię?</string>
+    <string name="cancel">Anuluj</string>
+</resources>

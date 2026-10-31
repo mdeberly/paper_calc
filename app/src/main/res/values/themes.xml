@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- E-ink friendly theme: pure black on white, no animations, no ripples. -->
+    <style name="Theme.PaperCalc" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:windowBackground">@color/paper</item>
+        <item name="android:colorBackground">@color/paper</item>
+        <item name="android:colorPrimary">@color/ink</item>
+        <item name="android:colorPrimaryDark">@color/paper</item>
+        <item name="android:colorAccent">@color/ink</item>
+        <item name="android:colorControlNormal">@color/ink</item>
+        <item name="android:colorControlActivated">@color/ink</item>
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:textColorSecondary">@color/ink</item>
+        <item name="android:statusBarColor">@color/paper</item>
+        <item name="android:navigationBarColor">@color/paper</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:alertDialogTheme">@style/Theme.PaperCalc.Dialog</item>
+    </style>
+
+    <style name="Theme.PaperCalc.Dialog" parent="@android:style/Theme.DeviceDefault.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/ink</item>
+        <item name="android:colorControlActivated">@color/ink</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="Key">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">@dimen/key_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:background">@null</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+
+    <style name="OpKey">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/key_op_bg</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:padding">@dimen/op_inset</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+
+    <style name="TopIcon">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+
+    <style name="SectionTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="Option">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:buttonTint">@color/ink</item>
+        <item name="android:background">@null</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+
+    <style name="RowButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:background">@drawable/outline_bg</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+</resources>

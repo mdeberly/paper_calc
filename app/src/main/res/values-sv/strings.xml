@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Alternativ</string>
+    <string name="history">Historik</string>
+    <string name="history_open">Visa de 20 senaste beräkningarna</string>
+    <string name="decimal_separator">Decimaltecken</string>
+    <string name="thousands_separator">Tusentalsavgränsare</string>
+    <string name="sep_comma">Komma ( , )</string>
+    <string name="sep_point">Punkt ( . )</string>
+    <string name="sep_space">Mellanslag</string>
+    <string name="example">Exempel: %1$s</string>
+    <string name="feedback">Återkoppling</string>
+    <string name="haptic_feedback">Vibrera vid varje knapptryckning</string>
+    <string name="language">Språk</string>
+    <string name="language_system">Systemspråk</string>
+    <string name="about">Om</string>
+    <string name="about_version">%1$s – version %2$s</string>
+    <string name="about_author">Skapad av Maximilien DEBERLY, Apotekare, Chauny, FRANKRIKE</string>
+    <string name="about_ai">med hjälp av Claude AI för koden</string>
+    <string name="flag_france">Frankrikes flagga</string>
+    <string name="check_latest_release">Sök efter senaste versionen</string>
+    <string name="no_browser">Ingen webbläsare hittades. Länken har kopierats till urklipp.</string>
+    <string name="copy">Kopiera</string>
+    <string name="copied">Kopierat: %1$s</string>
+    <string name="back">Tillbaka</string>
+    <string name="backspace">Radera</string>
+    <string name="toggle_sign">Byt tecken</string>
+    <string name="parentheses">Parenteser</string>
+    <string name="error_division_by_zero">Det går inte att dela med noll</string>
+    <string name="error_overflow">Talet är för stort</string>
+    <string name="history_hint">Tryck på en beräkning för att återanvända den, tryck länge för att kopiera.</string>
+    <string name="history_empty">Inga beräkningar ännu. Tryck på = för att spara en beräkning.</string>
+    <string name="clear">Rensa</string>
+    <string name="clear_history_confirm">Rensa hela historiken?</string>
+    <string name="cancel">Avbryt</string>
+</resources>

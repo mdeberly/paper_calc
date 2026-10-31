@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Možnosti</string>
+    <string name="history">Historie</string>
+    <string name="history_open">Zobrazit posledních 20 výpočtů</string>
+    <string name="decimal_separator">Desetinný oddělovač</string>
+    <string name="thousands_separator">Oddělovač tisíců</string>
+    <string name="sep_comma">Čárka ( , )</string>
+    <string name="sep_point">Tečka ( . )</string>
+    <string name="sep_space">Mezera</string>
+    <string name="example">Příklad: %1$s</string>
+    <string name="feedback">Odezva</string>
+    <string name="haptic_feedback">Vibrovat při každém stisku klávesy</string>
+    <string name="language">Jazyk</string>
+    <string name="language_system">Jazyk systému</string>
+    <string name="about">O aplikaci</string>
+    <string name="about_version">%1$s – verze %2$s</string>
+    <string name="about_author">Vytvořil Maximilien DEBERLY, lékárník, Chauny, FRANCIE</string>
+    <string name="about_ai">s pomocí Claude AI při psaní kódu</string>
+    <string name="flag_france">Francouzská vlajka</string>
+    <string name="check_latest_release">Zkontrolovat nejnovější verzi</string>
+    <string name="no_browser">Nebyl nalezen žádný prohlížeč. Odkaz byl zkopírován do schránky.</string>
+    <string name="copy">Kopírovat</string>
+    <string name="copied">Zkopírováno: %1$s</string>
+    <string name="back">Zpět</string>
+    <string name="backspace">Smazat</string>
+    <string name="toggle_sign">Změnit znaménko</string>
+    <string name="parentheses">Závorky</string>
+    <string name="error_division_by_zero">Nelze dělit nulou</string>
+    <string name="error_overflow">Číslo je příliš velké</string>
+    <string name="history_hint">Klepnutím výpočet znovu použijete, dlouhým stiskem jej zkopírujete.</string>
+    <string name="history_empty">Zatím žádné výpočty. Stiskněte = pro uložení výpočtu.</string>
+    <string name="clear">Vymazat</string>
+    <string name="clear_history_confirm">Vymazat celou historii?</string>
+    <string name="cancel">Zrušit</string>
+</resources>

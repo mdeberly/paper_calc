@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="key_text">30sp</dimen>
+    <dimen name="op_inset">6dp</dimen>
+    <dimen name="expr_text_max">46sp</dimen>
+    <dimen name="result_text">36sp</dimen>
+</resources>

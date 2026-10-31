@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Opzioni</string>
+    <string name="history">Cronologia</string>
+    <string name="history_open">Mostra le ultime 20 operazioni</string>
+    <string name="decimal_separator">Separatore decimale</string>
+    <string name="thousands_separator">Separatore delle migliaia</string>
+    <string name="sep_comma">Virgola ( , )</string>
+    <string name="sep_point">Punto ( . )</string>
+    <string name="sep_space">Spazio</string>
+    <string name="example">Esempio: %1$s</string>
+    <string name="feedback">Risposta</string>
+    <string name="haptic_feedback">Vibra a ogni pressione di un tasto</string>
+    <string name="language">Lingua</string>
+    <string name="language_system">Lingua di sistema</string>
+    <string name="about">Informazioni</string>
+    <string name="about_version">%1$s – versione %2$s</string>
+    <string name="about_author">Realizzato da Maximilien DEBERLY, Farmacista, Chauny, FRANCIA</string>
+    <string name="about_ai">con l\'aiuto di Claude AI per il codice</string>
+    <string name="flag_france">Bandiera francese</string>
+    <string name="check_latest_release">Verifica l\'ultima versione</string>
+    <string name="no_browser">Nessun browser trovato. Il link è stato copiato negli appunti.</string>
+    <string name="copy">Copia</string>
+    <string name="copied">Copiato: %1$s</string>
+    <string name="back">Indietro</string>
+    <string name="backspace">Cancella</string>
+    <string name="toggle_sign">Cambia segno</string>
+    <string name="parentheses">Parentesi</string>
+    <string name="error_division_by_zero">Impossibile dividere per zero</string>
+    <string name="error_overflow">Numero troppo grande</string>
+    <string name="history_hint">Tocca un\'operazione per riutilizzarla, tieni premuto per copiarla.</string>
+    <string name="history_empty">Nessuna operazione. Premi = per salvare un\'operazione.</string>
+    <string name="clear">Cancella</string>
+    <string name="clear_history_confirm">Cancellare tutta la cronologia?</string>
+    <string name="cancel">Annulla</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Opções</string>
+    <string name="history">Histórico</string>
+    <string name="history_open">Ver as 20 últimas operações</string>
+    <string name="decimal_separator">Separador decimal</string>
+    <string name="thousands_separator">Separador de milhares</string>
+    <string name="sep_comma">Vírgula ( , )</string>
+    <string name="sep_point">Ponto ( . )</string>
+    <string name="sep_space">Espaço</string>
+    <string name="example">Exemplo: %1$s</string>
+    <string name="feedback">Resposta</string>
+    <string name="haptic_feedback">Vibrar a cada toque numa tecla</string>
+    <string name="language">Idioma</string>
+    <string name="language_system">Idioma do sistema</string>
+    <string name="about">Sobre</string>
+    <string name="about_version">%1$s – versão %2$s</string>
+    <string name="about_author">Criado por Maximilien DEBERLY, Farmacêutico, Chauny, FRANÇA</string>
+    <string name="about_ai">com a ajuda do Claude AI para o código</string>
+    <string name="flag_france">Bandeira de França</string>
+    <string name="check_latest_release">Verificar a versão mais recente</string>
+    <string name="no_browser">Nenhum navegador encontrado. A ligação foi copiada para a área de transferência.</string>
+    <string name="copy">Copiar</string>
+    <string name="copied">Copiado: %1$s</string>
+    <string name="back">Voltar</string>
+    <string name="backspace">Apagar</string>
+    <string name="toggle_sign">Mudar o sinal</string>
+    <string name="parentheses">Parênteses</string>
+    <string name="error_division_by_zero">Não é possível dividir por zero</string>
+    <string name="error_overflow">Número demasiado grande</string>
+    <string name="history_hint">Toque numa operação para a reutilizar, toque longo para a copiar.</string>
+    <string name="history_empty">Ainda sem operações. Prima = para guardar uma operação.</string>
+    <string name="clear">Limpar</string>
+    <string name="clear_history_confirm">Limpar todo o histórico?</string>
+    <string name="cancel">Cancelar</string>
+</resources>

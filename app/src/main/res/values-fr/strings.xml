@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Options</string>
+    <string name="history">Historique</string>
+    <string name="history_open">Voir les 20 dernières opérations</string>
+    <string name="decimal_separator">Séparateur décimal</string>
+    <string name="thousands_separator">Séparateur des milliers</string>
+    <string name="sep_comma">Virgule ( , )</string>
+    <string name="sep_point">Point ( . )</string>
+    <string name="sep_space">Espace</string>
+    <string name="example">Exemple : %1$s</string>
+    <string name="feedback">Retour haptique</string>
+    <string name="haptic_feedback">Vibrer à chaque appui sur une touche</string>
+    <string name="language">Langue</string>
+    <string name="language_system">Langue du système</string>
+    <string name="about">À propos</string>
+    <string name="about_version">%1$s – version %2$s</string>
+    <string name="about_author">Réalisé par Maximilien DEBERLY, Pharmacien, Chauny, FRANCE</string>
+    <string name="about_ai">avec l\'aide de Claude AI pour le code</string>
+    <string name="flag_france">Drapeau français</string>
+    <string name="check_latest_release">Vérifier la dernière version</string>
+    <string name="no_browser">Aucun navigateur trouvé. Le lien a été copié dans le presse-papiers.</string>
+    <string name="copy">Copier</string>
+    <string name="copied">Copié : %1$s</string>
+    <string name="back">Retour</string>
+    <string name="backspace">Effacer</string>
+    <string name="toggle_sign">Changer le signe</string>
+    <string name="parentheses">Parenthèses</string>
+    <string name="error_division_by_zero">Division par zéro impossible</string>
+    <string name="error_overflow">Nombre trop grand</string>
+    <string name="history_hint">Appui court pour réutiliser une opération, appui long pour la copier.</string>
+    <string name="history_empty">Aucune opération. Appuyez sur = pour enregistrer une opération.</string>
+    <string name="clear">Effacer</string>
+    <string name="clear_history_confirm">Effacer tout l\'historique ?</string>
+    <string name="cancel">Annuler</string>
+</resources>
