@@ -2,7 +2,7 @@
 
 Calculatrice Android optimisée pour le **Mudita Kompakt** (écran e-ink 4,3", 800×480, Android 12 sans services Google).
 
-Version **0.5**
+Version **1.0**
 
 ## Fonctionnalités
 
@@ -27,10 +27,10 @@ Version **0.5**
 ## Installation
 
 Chaque push construit l'APK via GitHub Actions (onglet *Actions*, artefact `PaperCALC-apk`).
-Pour publier une release : créer un tag `v0.5` et le pousser ; l'APK est alors joint à la
+Pour publier une release : créer un tag `v1.0` et le pousser ; l'APK est alors joint à la
 [dernière release](https://github.com/mdeberly/paper_calc/releases/latest).
 
-Installation sur le Kompakt : copier l'APK sur le téléphone (ou via `adb install PaperCALC-v0.5.apk`).
+Installation sur le Kompakt : copier l'APK sur le téléphone (ou via `adb install PaperCALC-v1.0.apk`).
 
 ## Compilation locale
 
