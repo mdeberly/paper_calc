@@ -49,7 +49,7 @@ class MainActivity : BaseActivity() {
         key(R.id.key_paren) { calc.parenthesis() }
 
         // Multi-function key: opens / closes the mini keypad.
-        keyFn.onTap { setFunctionsOpen(fnPanel.visibility != View.VISIBLE) }
+        keyFn.onPress { setFunctionsOpen(fnPanel.visibility != View.VISIBLE) }
         fnKey(R.id.fn_pi) { calc.constant('π') }
         fnKey(R.id.fn_e) { calc.constant('e') }
         fnKey(R.id.fn_sqrt) { calc.squareRoot() }
@@ -67,8 +67,8 @@ class MainActivity : BaseActivity() {
             haptic(); calc.clear(); refresh(); true
         }
 
-        findViewById<View>(R.id.btn_copy).onTap { copyToClipboard() }
-        findViewById<View>(R.id.btn_more).onTap {
+        findViewById<View>(R.id.btn_copy).onPress { copyToClipboard() }
+        findViewById<View>(R.id.btn_more).onPress {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
@@ -100,7 +100,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun key(id: Int, action: () -> Unit) {
-        findViewById<View>(id).onTap {
+        findViewById<View>(id).onPress {
             action()
             refresh()
         }
@@ -108,7 +108,7 @@ class MainActivity : BaseActivity() {
 
     /** Mini keypad key: applies the function then closes the mini keypad. */
     private fun fnKey(id: Int, action: () -> Unit) {
-        findViewById<View>(id).onTap {
+        findViewById<View>(id).onPress {
             action()
             setFunctionsOpen(false)
             refresh()

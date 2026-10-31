@@ -66,10 +66,11 @@ abstract class BaseActivity : Activity() {
     }
 
     /**
-     * Click listener that vibrates as soon as the finger touches the key
-     * (more responsive than waiting for the release).
+     * Calculator key listener: vibrates as soon as the finger touches the key
+     * (more responsive than waiting for the release). Only for screens that
+     * do not scroll.
      */
-    protected fun View.onTap(action: () -> Unit) {
+    protected fun View.onPress(action: () -> Unit) {
         isSoundEffectsEnabled = false
         @Suppress("ClickableViewAccessibility")
         setOnTouchListener { _, ev ->
@@ -77,6 +78,18 @@ abstract class BaseActivity : Activity() {
             false
         }
         setOnClickListener { action() }
+    }
+
+    /**
+     * Click listener for scrollable screens: vibrates only once the tap is
+     * confirmed, so scrolling over a button does not vibrate.
+     */
+    protected fun View.onTap(action: () -> Unit) {
+        isSoundEffectsEnabled = false
+        setOnClickListener {
+            haptic()
+            action()
+        }
     }
 
     /** Wires the shared top bar (back arrow + title). */
