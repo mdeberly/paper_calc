@@ -51,7 +51,7 @@
             android:fontFamily="sans-serif"
             android:gravity="bottom|end"
             android:includeFontPadding="false"
-            android:maxLines="3"
+            android:maxLines="2"
             android:textColor="@color/ink"
             android:textIsSelectable="false" />
 
