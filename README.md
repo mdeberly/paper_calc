@@ -1,5 +1,7 @@
 # Paper CALC
 
+🇬🇧 English description: [DESCRIPTION.md](DESCRIPTION.md)
+
 Calculatrice Android optimisée pour le **Mudita Kompakt** (écran e-ink 4,3", 800×480, Android 12 sans services Google).
 
 Version **1.0**

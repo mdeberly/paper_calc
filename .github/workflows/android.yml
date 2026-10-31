@@ -55,4 +55,5 @@ jobs:
           name: Paper CALC ${{ env.VERSION }}
           make_latest: true
           files: ${{ env.APK }}
+          body_path: DESCRIPTION.md
           generate_release_notes: true
